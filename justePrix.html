@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Le juste prix</title>
+  </head>
+  <body>
+    <script>
+      const rightPrice = Math.ceil(Math.random() * 100);
+      console.log(rightPrice);
+
+      let playerName = prompt("Veuillez saisir votre nom");
+
+      while (true) {
+        let guestNumber = parseInt(
+          prompt("Veuillez saisir un chiffre entre 1 et 100"),
+          10
+        );
+
+        if (guestNumber < rightPrice) console.log("C'est plus !");
+        if (guestNumber > rightPrice) console.log("C'est moins !");
+        if (guestNumber === rightPrice) {
+          console.log(`Bravo ${playerName} tu as gagné ! 🚀`);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

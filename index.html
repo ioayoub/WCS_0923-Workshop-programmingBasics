@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple calculator</title>
+  </head>
+  <body>
+    <script>
+      let firstValue = parseInt(
+        prompt("Veuillez selectionner la première valeur"),
+        10
+      );
+      let operator = prompt("Veuillez saisir un opérateur");
+      let secondValue = parseInt(
+        prompt("Veuillez selectionner la deuxième valeur"),
+        10
+      );
+
+      let result = 0;
+
+      //   if (operator === "+") {
+      //     result = firstValue + secondValue;
+      //     console.log(result);
+      //   } else if (operator === "-") {
+      //     console.log(firstValue - secondValue);
+      //   } else if (operator === "*") {
+      //     console.log(firstValue * secondValue);
+      //   } else if (operator === "/") {
+      //     console.log(firstValue / secondValue);
+      //   } else {
+      //     console.log("Opérateur non valide");
+      //   }
+
+      function calculate(number1, number2, ope) {
+        switch (ope) {
+          case "+":
+            console.log(number1 + number2);
+            break;
+          case "-":
+            console.log(number1 - number2);
+            break;
+          case "*":
+            console.log(number1 * number2);
+            break;
+          case "/":
+            console.log(number1 / number2);
+            break;
+          default:
+            console.log("Opérateur non valide");
+        }
+      }
+
+      calculate(firstValue, secondValue, operator);
+    </script>
+  </body>
+</html>
